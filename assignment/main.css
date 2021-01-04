@@ -1,0 +1,35 @@
+body{
+	background: #2C3C45;
+}
+
+header, main {
+	display: block;
+}
+
+header {
+	padding: 10px;
+	text-align: center;
+    }
+
+.main {
+	padding-left: 40px;
+}
+
+
+
+.icon {
+	width: 45%;
+	padding-left: 50px;
+}
+
+.line {
+	line-height: 200%;
+	padding-left: 50px;
+	font-size: 20px;
+}
+
+span h2{
+	background-color: #fff2ac;
+    background-image: linear-gradient(to right, #738b99, #181f24);
+    width: 650px;
+}
