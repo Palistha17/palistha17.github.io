@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>First</title>
+	<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+	<header>
+		<h1><u>Assignment on GIT and VCS</u></h1>
+	</header>
+    
+    <div class="main">
+    <span>
+    <h2>1.	Can we have a global .gitignore? </h2>
+        <div class=line>Yes, we can create a global .gitignore file and all the entries in that file will be ignored in all the Git repositories. For this we use the following command: <br>
+
+	git config –global core.excludesfile</div>
+	<img src=git1.jpg alt="first image" class="icon"><br>
+	<img src="git2.jpg" alt="second image" class="icon">
+
+	<h2>2.	How to find difference between two branches?</h2>
+        <div class=line>To find the difference between two branches, we use “git diff” command provided that the branch names are separated by dots. <br>
+
+		git diff branch1..branch2</div>
+	<img src=branch.jpg alt="branch image" class="icon">
+
+	<h2>3.	How to find change of a file between two commits?</h2>
+        <div class=line>Using the following command, we can find change of a file between two commits: <br>
+		git diff (commit1-hash) (commit2-hash) -- (filename)</div>
+	<img src=twocommits.jpg alt="commit image" class="icon">
+	</span>
+	</main>
+
+</body>
+</html>
