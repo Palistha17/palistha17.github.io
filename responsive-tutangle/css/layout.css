@@ -613,3 +613,137 @@ input {
 
 
 
+/* media queries */
+
+
+@media only screen and (min-width: 768px) {
+	.top1 {
+		float: left;
+		width: 79.84%;
+	}
+
+	.logo {
+		margin-right: 24px;
+	}
+
+	#text {
+		width: 90.4%;
+	}
+
+	.notification {
+		float: right;
+	}
+
+	.notification ul li {
+		margin: 0 10px;
+		text-align: left;
+		font-size: 15px;
+	}
+
+	.middle-part {
+		width: 74.24%;
+		float: right;
+	}
+
+	.middle-part-holder {
+		padding: 0 26px;
+	}
+
+	.middle-header.left{
+		padding-left:16px;
+	}
+
+	.left {
+		float: left;
+	}
+	.right {
+		float: right;
+	}
+
+	.main-container .content .left-part {
+		width: 81.84%;
+	}
+
+	.main-container .content .bar {
+    	width: 25.76%;
+	}
+
+
+	.left-part {
+		float: left;
+		width: 82.54%;
+	}
+	
+	.search {
+		padding-left: 5%;
+	}
+
+	.navbar {
+		float: left;
+		text-align: left;
+	}
+
+	.navbar ul li, .notification ul li {
+		float: left;
+	}
+
+	.right-side {
+		width: 18.16%;
+	}
+
+
+}
+}
+
+
+
+
+@media only screen and (min-width: 1024px){
+	.content{
+		width: 480px;
+	}
+
+	.profile1,
+	.profile2,
+	.logo-wrappper {
+		float: left;
+
+	}
+
+
+	.all-info ul li a:first-child{
+		width: 75%;
+	}
+
+	.content .inside-left1 .bar {
+    	width: 100%;
+	}
+
+
+	.middle-part {
+		float: right;
+		width: 562px
+		padding: 0 20px;
+	}
+
+	.right-side {
+		float: left;
+	}
+
+	.footer {
+		font-size: 12px;
+	}
+
+
+	.last-footer ul li {
+		width: auto;
+		float: left;  
+		padding: 0px 7px 0px 10px;
+	}
+
+	.copyright {
+		color: #fff;
+		padding: 19px 3px;
+		float: right;
+	}
+}
