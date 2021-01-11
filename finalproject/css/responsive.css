@@ -1,0 +1,134 @@
+@media only screen and (min-width: 768px) {
+
+
+    .site-image {
+	float: left;
+	width: 300px;
+}
+
+.info-site {
+	padding-left: 20px;
+}
+
+.all-list {
+	width: 33.33%;
+    float: left;
+    padding: 20px 20px;
+}
+
+.box-holder {
+	display: inline-block;
+	width: 25%;
+	padding: 20px 15px;
+}
+
+.team-content {
+	letter-spacing: -6px;
+}
+
+.info {
+	width: 25%;
+    display: inline-block;
+    padding: 20px 20px;
+    letter-spacing: 0;
+
+}
+
+.info-item {
+	width: 25%;
+	float: left;
+}
+
+.clients-holder {
+	width: 33.33%;
+	float: left;
+	padding: 0 15px;
+}
+
+.mobile-part {
+	width: 30%;
+	float: left;
+}
+
+.responsive {
+	width: 50%;
+	margin: 0;
+	float: left;
+}
+	
+.inside-body11 {
+	padding: 100px 0 0;
+}
+
+.nav-bar {
+	float: right;
+	width: 79%;
+	vertical-align: middle;
+
+}
+.logo {
+	float: left;
+	margin: 0;
+}
+
+.nav-bar ul {
+	text-align: right;
+}
+
+.nav-bar ul li {
+	display: inline-block;
+	
+}
+
+.nav-bar ul li a {
+	display: inline-block;
+
+}
+
+.inside-body1 h1 {
+	font-size: 30px;
+}
+
+.btn {
+	padding: 25px 62px;
+}
+
+.design h3 {
+	font-size: 40px;
+}
+
+.responsive h1 {
+	font-size: 40px;
+}
+
+.description h2 {
+	font-size: 40px;
+}
+
+.team-info h1 {
+	font-size: 40px;
+
+}
+
+.clients-part h2 {
+	font-size: 50px;
+}
+}
+
+
+@media only screen and (min-width: 992px){
+
+.site-image {
+	width: 571px;
+}
+
+.info-site {
+	 padding-left: 52px;
+}
+
+
+.mobile-part {
+	width: 50%;
+}
+
+}
