@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+.slider {
+	width: 400px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.slider-container {
+		overflow: hidden;
+		position: relative;
+}
+
+.slide-show {
+	width: 1200px;
+	transition-property: margin;
+	transition-timing-function: ease;
+}
+
+.slide-show .slide {
+	width: 400px;
+	float: left;
+	overflow: hidden;
+
+}
+
+.slide-show::after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.slide-dots {
+	text-align: center;
+	text-decoration: none;
+}
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 30px 15px;
+	border-radius: 50%;
+	display: inline-block;
+	background-color: gray;
+	transition: 0.6s ease;
+}
+
+.dot.active  {
+	background:	#2F4F4F;
+}
+
+.dot: hover {
+	background-color: #696969;
+}
+
+.arrow {
+    position: absolute;
+    height: 30px;
+    top: 100px;
+    width: 30px;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.6s ease;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.nextbtn {
+  right: 0;
+}
+
+.arrow:hover {
+	background-color: gray;
+	border-width: 20px;
+}
+
