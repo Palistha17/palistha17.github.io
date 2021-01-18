@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript Slider</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="slider">
+	<div class="slider-container">
+		<div class="slide-show">
+			<div class="slide">
+				<img src="images/img1.jpg" alt="Image1">
+			</div>
+			<div class="slide">
+				<img src="images/img2.jpg" alt="Image2">
+			</div>
+			<div class="slide">
+				<img src="images/img3.jpg" alt="Image3">
+			</div>
+		</div>
+	</div>
+
+
+	<div class="slide-dots">
+		<a href="#" class="dot active" onclick="dots(1)"></a>
+		<a href="#"class="dot" onclick="dots(2)"></a>
+		<a href="#" class="dot" onclick="dots(3)"></a>
+	</div>
+
+
+	<a href="#" class="arrow prevbtn" onclick="plusSlides(-1)">&#x276e</a>
+	<a href="#" class="arrow nextbtn" onclick="plusSlides(+1)">&#x276f</a>
+	</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
