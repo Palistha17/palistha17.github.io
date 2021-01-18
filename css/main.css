@@ -7,11 +7,15 @@ article, aside, figure, footer, header, main, menu, nav, section, p {
 body, h1, p, ul, ol, li, dd, dl {
     margin: 0; padding: 0;
 }
+
+body {
+	background: rgb(255,105,84);
+    background: linear-gradient(180deg, rgba(255,105,84,1) 0%, rgba(255,72,87,1) 51%, rgba(255,63,87,1) 100%);
+}
  
 header {
 	position: relative;
     background-color: #C5C6C7;
-    padding: 50px;
     text-align: left;
     font-size: 21px;
     }
@@ -75,7 +79,7 @@ h3{
   
 /*table styling*/
 header {
-	padding: 50px 20px;
+	padding: 25px 30px;
 }
 h1 {
 	width: 175%;
