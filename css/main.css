@@ -8,10 +8,7 @@ body, h1, p, ul, ol, li, dd, dl {
     margin: 0; padding: 0;
 }
 
-body {
-	background: rgb(255,105,84);
-    background: linear-gradient(180deg, rgba(255,105,84,1) 0%, rgba(255,72,87,1) 51%, rgba(255,63,87,1) 100%);
-}
+
  
 header {
 	position: relative;
