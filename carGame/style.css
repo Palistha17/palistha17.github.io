@@ -1,0 +1,100 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	margin-left: 500px;
+	background-color: #211D1C;
+}
+
+#lane {
+	margin-left: 20px;
+	width: 300px;
+	height: 550px;
+	background-image: url('images/lane.jpg');
+	background-repeat: repeat-y;
+	background-position: 0%;
+
+
+
+}
+
+#lane.start {
+	animation: moveRoad 2s linear infinite;
+}
+
+
+@keyframes moveRoad {
+	0% {
+		background-position-y: 0px;
+	}
+
+	100% {
+		background-position-y: 500px;
+	}
+}
+
+#car1 {
+	position: relative;
+    width: 100px;
+    height: 100px;
+    top: 400px;
+    left: 0px;
+	background-image: url('images/car1.jpg');
+	background-size: 50% 100%;
+	background-repeat: repeat-y;
+	background-position: 50%;
+}
+
+#car2 {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	top: 0px;
+    left: 0px;
+	background-image: url('images/car2.jpg');
+	background-size: 50% 100%;
+	background-repeat: no-repeat;
+	background-position-x: 50%; 
+	
+}
+.start #car2 {
+	animation: moveCar1 2s linear infinite;
+}
+
+@keyframes moveCar1 {
+	0% {
+		top: 0px;
+	}
+
+	100% {
+		top: 450px;
+	}
+}
+
+#score {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    background: white;
+    height: 30px;
+    width: 130px;
+    font-size: 30px;
+    padding: 10px;
+    background: #A9A9A9;
+}
+
+#btn {
+	position: fixed;
+    top: 20px;
+    right: 10px;
+    background: white;
+    height: 50px;
+    width: 150px;
+    font-size: 22px;
+    padding: 12px;
+	text-transform: uppercase;
+    background: #A8A8A8;
+    border-radius: 10px;
+ }
