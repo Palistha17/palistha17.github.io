@@ -9,8 +9,7 @@ body, h1, p, ul, ol, li, dd, dl {
 }
 
 
- 
-header {
+ header {
 	position: relative;
     background-color: #C5C6C7;
     text-align: left;
@@ -49,7 +48,7 @@ h3, h2 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 	font-weight: bold;
-	line-height: 150%;
+	line-height: 97%;
 }
 
 h3{
@@ -83,7 +82,7 @@ h1 {
 	text-align: center;
 }
 table {
-	padding-top: 50px ;
+	padding-top: 32px ;
 	border-collapse: collapse;
 	display: inline-block;
 	text-align: left;
