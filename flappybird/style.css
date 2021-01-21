@@ -1,0 +1,26 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#canvas {
+	border: 1px solid #000;
+    display: block;
+    margin: 0 auto;
+  
+}
+
+#btn {
+	position: fixed;
+	bottom: 20px;
+    right: 50px;
+    height: 50px;
+    width: 150px;
+    font-size: 22px;
+    padding: 12px;
+	text-transform: uppercase;
+    background: #A8A8A8;
+    border-radius: 10px;
+ }
+
+
