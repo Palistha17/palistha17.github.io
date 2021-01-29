@@ -1,6 +1,7 @@
 class Game {
     constructor() {
-        this.context = document.getElementById("canvas").getContext("2d");
+        this.canvas = document.getElementById("canvas");
+        this.context = this.canvas.getContext("2d");
 
         this.highscore = 0;
 
@@ -8,7 +9,8 @@ class Game {
         this.spikes = new Spikes();
         this.background = new Background();
 
-        this.gameState = new RunningState(this);
+        this.eventHandler = new EventHandler(this.canvas);
+        this.gameState = new MenuState(this);
     }
 
     run() {
