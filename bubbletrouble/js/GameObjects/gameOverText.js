@@ -6,7 +6,7 @@ class GameOverText {
 
     draw(context) {
         let posX = 400 - this.text.width / 2;
-        let posY = 250 - this.text.height / 2;
+        let posY = 150 - this.text.height / 2;
 
         context.drawImage(this.text, posX, posY);
     }
