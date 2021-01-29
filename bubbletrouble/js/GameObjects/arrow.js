@@ -1,12 +1,12 @@
 class Arrow {
     constructor() {
-        this.isActive = false;
         this.arrow = new Image();
         this.arrow.src = "images/arrow.png";
 
-        this.posX = 0;      
+        this.posX = 0;
         this.posY = 450;
         this.speed = 5;
+        this.isActive = false;
     }
 
     reset() {
@@ -21,7 +21,7 @@ class Arrow {
 
     hasCollided(ball) {
         if (!this.isActive) {
-           return false; 
+          return false;  
         } 
 
         if (this.posX < ball.posX + ball.radius && this.posX > ball.posX - ball.radius &&
@@ -35,9 +35,7 @@ class Arrow {
 
 
     update() {
-        if (!this.isActive) {
-          return;  
-        } 
+        if (!this.isActive) return;
 
         this.posY -= this.speed;
         if (this.posY == 0) {
@@ -46,9 +44,7 @@ class Arrow {
     }
 
     draw(context) {
-        if (!this.isActive) {
-          return;  
-        } 
+        if (!this.isActive) return;
         context.drawImage(this.arrow, this.posX, this.posY, this.arrow.width, 450);
     }
 }
