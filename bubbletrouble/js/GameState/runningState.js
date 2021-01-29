@@ -11,25 +11,21 @@ class RunningState {
 
     addBalls() {
         this.balls = [];
-        this.balls.push(new Ball(200, 200, 25, 3, 3, '#944633'));
-        this.balls.push(new Ball(400, 200, 30, 3, 2, '#022717'));
+        this.balls.push(new Ball(200, 200, 30, 3, 3, '#FF0000'));
+        this.balls.push(new Ball(400, 200, 30, 3, 2, '#00FF00'));
     }
 
     update() {
         this.detectCollisions();
         this.player.update();
-        for (let ball of this.balls) {
-            ball.update();
-        }
+        for (let ball of this.balls) ball.update();
     }
 
     draw() {
         this.player.draw(this.game.context);
         this.score.draw(this.game.context);
         this.timer.draw(this.game.context);
-        for (let ball of this.balls) {
-          ball.draw(this.game.context);  
-        } 
+        for (let ball of this.balls) ball.draw(this.game.context);
     }
 
     detectCollisions() {
@@ -39,7 +35,6 @@ class RunningState {
                 this.score.update();
             }
 
-            //player and ball collide
             if (this.player.hasCollided(ball)) {
                 this.player.lives--;
                 if (this.player.lives > 0) {
@@ -67,6 +62,6 @@ class RunningState {
     }
 
     showGameOverState() {
-        this.game.gameState = new GameOverState(this.game, this.score);
+        this.game.gameState = new GameOverState(this.game, this.score)
     }
 }
