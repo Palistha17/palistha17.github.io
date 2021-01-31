@@ -7,11 +7,13 @@ class RunningState {
 
         this.player = new Player();
         this.addBalls();
+
+        this.activateShield = false;
     }
 
     addBalls() {
         this.balls = [];
-        this.balls.push(new Ball(200, 200, 30, 3, 3, '#FF0000'));
+        this.balls.push(new Ball(200, 200, 25, 3, 3, '#FF0000'));
         this.balls.push(new Ball(400, 200, 30, 3, 2, '#00FF00'));
     }
 
@@ -29,20 +31,28 @@ class RunningState {
     }
 
     detectCollisions() {
+        for (let powerUp of this.player.powerUps) {
+            if (powerUp.hasCollided(this.player)) powerUp.execute(this);
+        }
+
         for (let ball of this.balls) {
             if (this.player.arrow.hasCollided(ball)) {
+                if (ball.powerUp) this.player.addPowerUp(ball.powerUp, ball.posX, ball.posY);
+
                 this.splitBall(ball);
                 this.score.update();
             }
 
-            if (this.player.hasCollided(ball)) {
-                this.player.lives--;
-                if (this.player.lives > 0) {
-                    this.addBalls();
-                    this.timer.reset();
-                    this.player.reset();
-                } else {
-                    this.showGameOverState();
+            if (!this.activateShield) {
+                if (this.player.hasCollided(ball)) {
+                    this.player.lives--;
+                    if (this.player.lives > 0) {
+                        this.addBalls();
+                        this.timer.reset();
+                        this.player.reset();
+                    } else {
+                        this.showGameOverState();
+                    }
                 }
             }
         }
