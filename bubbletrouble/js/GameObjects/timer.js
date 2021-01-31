@@ -8,9 +8,15 @@ class Timer {
 
     update = () => {
         this.seconds--;
+
         if (this.seconds == 0) {
             this.onFinish();
         }
+        
+    }
+
+    add(sec) {
+        this.seconds += sec;
     }
 
     reset() {
