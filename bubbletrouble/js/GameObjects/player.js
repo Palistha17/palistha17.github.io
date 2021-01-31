@@ -11,12 +11,13 @@ class Player {
       this.arrow = new Arrow();
       this.player = new Image();
       this.player.src = "images/player.png";
+      this.powerUps = [];
 
       document.addEventListener("keydown", this.handlePosition);
       this.context = document.getElementById("canvas").getContext("2d");
   }
 
-  handlePosition = (event) => {
+ handlePosition = (event) => {
       event.preventDefault();
       if (event.code == "ArrowLeft") {
           this.posX -= 10;
@@ -37,8 +38,15 @@ class Player {
       }
 
   }
+  
+  addPowerUp(powerUp, posX, posY) {
+      powerUp.drop(posX, posY);
+      this.powerUps.push(powerUp);
+  }
+
 
   reset() {
+      this.powerUps = [];
       this.posX = 400;
   }
 
@@ -47,33 +55,56 @@ class Player {
       let ballDistanceY = Math.abs(ball.posY - this.posY);
 
       if (ballDistanceX > (this.width / 2 + ball.radius)) {
-        return false;  
-      } 
+          return false;
+      }
       if (ballDistanceY > (this.height / 2 + ball.radius)) {
-        return false;  
-      } 
+          return false;
+      }
 
       if (ballDistanceX <= (this.width / 2)) {
-        return true;  
-      } 
+          return true;
+      }
       if (ballDistanceY <= (this.height / 2)) {
-        return true;  
-      } 
+          return true;
+      }
 
-      let cornerDistanceSq = Math.pow((ballDistanceX - this.width / 2), 2) + Math.pow((ballDistanceY - this.height / 2), 2);
+      let cornerDistanceSq = Math.pow((ballDistanceX - this.width / 2), 2) +
+          Math.pow((ballDistanceY - this.height / 2), 2);
+
       return (cornerDistanceSq <= Math.pow(ball.radius, 2));
 
   }
 
   update() {
       this.arrow.update();
+
+      if (this.powerUps.length > 0) {
+          for (let powerUp of this.powerUps) {
+              if (powerUp.isExecuted) {
+                  let powerUpIndex = this.powerUps.indexOf(powerUp);
+                  this.powerUps.splice(powerUpIndex, 1);
+                  continue;
+              }
+
+              powerUp.update();
+
+              if (powerUp.hasCollided(this)) {
+                  powerUp.setActive(this.posX);
+              }
+          }
+      }
   }
 
   draw(context) {
       this.arrow.draw(context);
       context.drawImage(this.player, 0, 112, this.width, this.height, this.posX, this.posY, this.width, this.height);
+
       context.fillStyle = "#000";
       context.font = "20px Verdana";
       context.fillText("Lives : " + this.lives, 10, 480);
+
+      if (this.powerUps.length > 0) {
+          for (let powerUp of this.powerUps) powerUp.draw(context);
+      }
   }
 }
