@@ -23,6 +23,6 @@ class MenuState {
     }
 
     showRunningState() {
-        this.game.gameState = new Level2State(this.game);
+        this.game.gameState = new Level1State(this.game);
     }
 }
