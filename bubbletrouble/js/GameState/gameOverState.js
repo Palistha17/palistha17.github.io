@@ -37,6 +37,6 @@ class GameOverState {
     }
 
     showRunningState() {
-        this.game.gameState = new RunningState(this.game)
+        this.game.gameState = new Level1State(this.game)
     }
 }
