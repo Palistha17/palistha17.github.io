@@ -21,16 +21,12 @@ class PowerUp {
 
     setActive(posX) {
         this.posX = posX;
-        this.isDropped = false;
-
-        if (this.isActive || this.isExecuted) return;
 
         this.posY = 450 - this.image.height;
-        this.isActive = true;
-    }
+        if (this.isActive || this.isExecuted) return;
 
-    setInactive() {
-        this.isActive = false;
+        this.isActive = true;
+        this.isDropped = false;
     }
 
     setExecuted() {
@@ -42,12 +38,21 @@ class PowerUp {
     }
 
     update() {
-        if (!this.isDropped) return;
-        if (this.posY < 450 - 20) this.posY += this.speed;
+        if (!this.isDropped) {
+            return;
+        }
+
+        if (this.posY < 450 - 20) {
+            this.posY += this.speed;
+        }
     }
 
     draw(context) {
-        if (this.isActive && !this.shouldDisappear) context.drawImage(this.image, this.posX, this.posY);
-        else if (this.isDropped) context.drawImage(this.image, this.posX, this.posY, 20, 20);
+        if (this.isActive && !this.shouldDisappear) {
+            context.drawImage(this.image, this.posX, this.posY - 25, 50, 70);
+        }
+        else if (this.isDropped) {
+            context.drawImage(this.image, this.posX, this.posY, 20, 20);
+        }
     }
 }
