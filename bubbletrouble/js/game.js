@@ -6,7 +6,6 @@ class Game {
         this.highscore = 0;
 
         this.floor = new Floor();
-        this.spikes = new Spikes();
         this.background = new Background();
 
         this.eventHandler = new EventHandler(this.canvas);
@@ -28,7 +27,6 @@ class Game {
     draw() {
         this.background.draw(this.context);
         this.floor.draw(this.context);
-        this.spikes.draw(this.context);
         this.gameState.draw();
     }
 }
