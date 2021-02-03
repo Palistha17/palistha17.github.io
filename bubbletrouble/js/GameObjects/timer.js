@@ -6,21 +6,20 @@ class Timer {
         this.timer = setInterval(this.update, 1000);
     }
 
-    update = () => {
-        this.seconds--;
-
-        if (this.seconds == 0) {
-            this.onFinish();
-        }
-        
-    }
-
     add(sec) {
         this.seconds += sec;
     }
 
     reset() {
         this.seconds = 60;
+    }
+
+    update = () => {
+        this.seconds--;
+        if (this.seconds == 0) {
+            this.onFinish();
+            clearInterval(this.timer);
+        }
     }
 
     draw(context) {
