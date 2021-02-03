@@ -4,12 +4,11 @@ class Shield extends PowerUp {
     }
 
     execute(state) {
-        if (this.isActive) return;
+        if (super.isActive) return;
 
         state.activateShield = true;
         setTimeout(() => {
             state.activateShield = false;
-            super.setInactive();
             super.setExecuted();
         }, 5000);
     }
