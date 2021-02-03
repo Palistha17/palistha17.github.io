@@ -1,5 +1,5 @@
 class Ball {
-    constructor(posX, posY, radius, speedX, splitCount, color) {
+    constructor(posX, posY, radius, speedX, splitCount, color, bounceHeight = 12) {
         this.posX = posX;
         this.posY = posY;
 
@@ -9,12 +9,15 @@ class Ball {
 
         this.speedX = speedX;
         this.speedY = 0;
+        this.bounceHeight = bounceHeight;
 
         this.powerUp = this.selectPowerUp();
     }
 
     selectPowerUp() {
-        if (this.getRandomInt(10) > 5) return undefined;
+        if (this.getRandomInt(10) > 5) {
+            return undefined;
+        }
 
         let powerUpIndex = this.getRandomInt(3);
         switch (powerUpIndex) {
@@ -34,7 +37,7 @@ class Ball {
         }
 
         if (this.posY > 450 - this.radius || this.posY < 0) {
-            this.speedY = -12;
+            this.speedY = -this.bounceHeight;
         }
     }
 
