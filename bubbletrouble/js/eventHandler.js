@@ -17,7 +17,7 @@ class EventHandler {
         this.mouseY = y - this.canvas.offsetTop;
     }
 
-    clearMousePos = (_) => {
+    clearMousePos = () => {
         this.mouseX = -1;
         this.mouseY = -1;
     }
