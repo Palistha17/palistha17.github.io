@@ -21,8 +21,8 @@ class Arrow {
 
     hasCollided(ball) {
         if (!this.isActive) {
-          return false;  
-        } 
+            return false;
+        }
 
         if (this.posX < ball.posX + ball.radius && this.posX > ball.posX - ball.radius &&
             this.posY - ball.posY < ball.radius) {
@@ -35,16 +35,20 @@ class Arrow {
 
 
     update() {
-        if (!this.isActive) return;
+        if (!this.isActive) {
+            return;
+        }
 
         this.posY -= this.speed;
         if (this.posY == 0) {
-          this.reset();  
-        } 
+            this.reset();
+        }
     }
 
     draw(context) {
-        if (!this.isActive) return;
+        if (!this.isActive) {
+            return;
+        }
         context.drawImage(this.arrow, this.posX, this.posY, this.arrow.width, 450);
     }
 }
