@@ -1,5 +1,5 @@
 class Ball {
-    constructor(posX, posY, radius, speedX, splitCount, color, bounceHeight = 12) {
+    constructor(posX, posY, radius, speedX, splitCount, color, bounceHeight) {
         this.posX = posX;
         this.posY = posY;
 
