@@ -29,7 +29,6 @@ class Arrow {
             this.reset();
             return true;
         }
-
         return false;
     }
 
