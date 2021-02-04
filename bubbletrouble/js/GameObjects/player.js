@@ -53,7 +53,6 @@ class Player {
         this.powerUps.push(powerUp);
     }
 
-
     reset() {
         this.powerUps = [];
         this.posX = 400;
@@ -107,7 +106,11 @@ class Player {
         context.font = "20px Verdana";
         context.fillText("Lives : " + this.lives, 10, 480);
 
-        if (this.powerUps.length == 0) return;
-        for (let powerUp of this.powerUps) powerUp.draw(context);
+        if (this.powerUps.length == 0) {
+            return;
+        }
+        for (let powerUp of this.powerUps) {
+            powerUp.draw(context);
+        }
     }
 }
