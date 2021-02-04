@@ -25,6 +25,6 @@ class Timer {
     draw(context) {
         context.fillStyle = "#000";
         context.font = "20px Verdana";
-        context.fillText("Time: " + this.seconds, 680, 60);
+        context.fillText("Time: " + this.seconds, 680, 480);
     }
 }
