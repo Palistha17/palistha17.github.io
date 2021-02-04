@@ -9,7 +9,6 @@ class Spikes {
         this.posY = posY;
         this.shouldMove = shouldMove;
         this.ceilingHeight = ceilingHeight;
-
     }
 
     reset() {
@@ -31,6 +30,4 @@ class Spikes {
         }
         context.drawImage(this.ceiling, 0, 0, 800, this.ceilingHeight);
     }
-
-
 }
