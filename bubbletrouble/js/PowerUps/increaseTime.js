@@ -4,7 +4,7 @@ class IncreaseTime extends PowerUp {
     }
 
     execute(state) {
-        if (this.isExecuted) return;
+        if (super.isExecuted) return;
 
         state.timer.add(10);
         super.setExecuted();
