@@ -17,5 +17,4 @@ class Score {
         context.fillText("Score : " + this.score, 10, 60);
         context.fillText("Highscore : " + this.highscore, 10, 80);
     }
-
 }
