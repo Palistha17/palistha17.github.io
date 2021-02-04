@@ -8,12 +8,13 @@ class Level2State extends RunningState {
 
         this.background = new Image();
         this.background.src = "images/level2.jpg";
-
     }
 
     addBalls() {
         this.balls = [];
-        this.balls.push(new Ball(100, 350, 10, 3, 0, '#00FF00', 10));
+        this.balls.push(new Ball(500, 350, 10, 3, 0, '#00FF00', 10));
+        this.balls.push(new Ball(50, 350, 10, 3, 0, '#FF0000', 10));
+        this.balls.push(new Ball(250, 350, 10, 3, 0, '#0000FF', 10));
     }
 
     update() {
@@ -30,7 +31,7 @@ class Level2State extends RunningState {
         this.game.context.drawImage(this.background, 0, 0, 800, 450);
         this.game.context.fillStyle = "#000";
         this.game.context.font = "20px Verdana";
-        this.game.context.fillText("level 2", 700, 480);
+        this.game.context.fillText("level 2", 350, 480);
 
         super.draw();
         this.spikes.draw(this.game.context);
