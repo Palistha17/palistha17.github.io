@@ -12,8 +12,9 @@ class Level3State extends RunningState {
 
     addBalls() {
         this.balls = [];
-        this.balls.push(new Ball(100, 350, 10, 3, 0, '#00FF00', 9));
-        this.balls.push(new Ball(200, 350, 10, 3, 0, '#FF0000', 9));
+        this.balls.push(new Ball(10, 350, 10, 3, 0, '#00FF00', 11));    
+        this.balls.push(new Ball(260, 350, 10, 3, 0, '#0000FF', 11));
+        this.balls.push(new Ball(790, 350, 10, 3, 0, '#FF0000', 11));
     }
 
     update() {
@@ -25,8 +26,8 @@ class Level3State extends RunningState {
         }
 
         if (this.spikes.hasCollided(this.player)) {
-            this.spikes.reset();
             this.resetLevel(this);
+            this.spikes.reset();
         }
 
         if (this.balls.length == 0) {
@@ -38,7 +39,7 @@ class Level3State extends RunningState {
         this.game.context.drawImage(this.background, 0, 0, 800, 450);
         this.game.context.fillStyle = "#000";
         this.game.context.font = "20px Verdana";
-        this.game.context.fillText("Level 3", 700, 480);
+        this.game.context.fillText("Level 3", 350, 480);
 
         super.draw();
         this.spikes.draw(this.game.context);
