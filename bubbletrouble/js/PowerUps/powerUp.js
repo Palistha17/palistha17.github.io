@@ -34,8 +34,7 @@ class PowerUp {
     }
 
     hasCollided(player) {
-        return this.posX < player.posX + player.width && this.posX + 20 > player.posX && this.posY + 20 > player.posY;
-    }
+        return this.posX < player.posX + player.width && this.posX + 20 > player.posX && this.posY + 20 > player.posY;    }
 
     update() {
         if (!this.isDropped) {
