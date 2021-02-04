@@ -5,6 +5,7 @@ class RunningState {
         this.timer = new Timer(() => this.showGameOverState());
         this.score = new Score(this.game.highscore);
         this.player = new Player();
+        this.spikes = new Spikes();
 
         this.activateShield = false;
     }
@@ -54,11 +55,11 @@ class RunningState {
             state.addBalls();
             this.player.reset();
             this.timer.reset();
+            this.spikes.reset();
         } else {
             this.showGameOverState();
         }
     }
-
 
     splitBall(ball, balls) {
         if (ball.splitCount > 0) {
