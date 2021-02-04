@@ -13,12 +13,12 @@ class Button {
     }
 
     draw(context) {
-        context.fillStyle = "#34FF34";
+        context.fillStyle = "#1CCF84";
         context.fillRect(this.posX, this.posY, this.width, this.height);
 
         context.fillStyle = "#000";
         context.font = "20px Verdana";
-        context.fillText(this.label, this.posX + 20, this.posY + 32);
+        context.fillText(this.label, this.posX + 23, this.posY + 32);
 
     }
 }
