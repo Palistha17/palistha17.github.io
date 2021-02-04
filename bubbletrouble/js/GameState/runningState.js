@@ -49,7 +49,17 @@ class RunningState {
         }
     }
 
+    
+    sleep(milliseconds) {
+        const date = Date.now();
+        let currentDate = null;
+        do {
+            currentDate = Date.now();
+        } while (currentDate - date < milliseconds);
+    }
+
     resetLevel(state) {
+        this.sleep(1000);
         this.player.lives--;
         if (this.player.lives > 0) {
             state.addBalls();
