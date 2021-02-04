@@ -59,28 +59,19 @@ class Player {
     }
 
     hasCollided(ball) {
-        let ballDistanceX = Math.abs(ball.posX - this.posX);
-        let ballDistanceY = Math.abs(ball.posY - this.posY);
+        let closestX = this.clamp(ball.posX, this.posX, this.posX + this.width);
+        let closestY = this.clamp(ball.posY, this.posY, this.posY + this.height);
 
-        if (ballDistanceX > (this.width / 2 + ball.radius)) {
-            return false;
-        }
-        if (ballDistanceY > (this.height / 2 + ball.radius)) {
-            return false;
-        }
+        let distanceX = ball.posX - closestX;
+        let distanceY = ball.posY - closestY;
 
-        if (ballDistanceX <= (this.width / 2)) {
-            return true;
-        }
-        if (ballDistanceY <= (this.height / 2)) {
-            return true;
-        }
+        let distanceSquared = (distanceX * distanceX) + (distanceY * distanceY);
+        return distanceSquared < (ball.radius * ball.radius);
 
-        let cornerDistanceSq = Math.pow((ballDistanceX - this.width / 2), 2) +
-            Math.pow((ballDistanceY - this.height / 2), 2);
+    }
 
-        return (cornerDistanceSq <= Math.pow(ball.radius, 2));
-
+    clamp(num, min, max) {
+        return num <= min ? min : num >= max ? max : num;
     }
 
     update() {
